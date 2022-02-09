@@ -5,7 +5,13 @@
         
       
     <body>  
-    <?php $python = "python python.py";
-    echo $python;>
+    <?php 
+
+$command = escapeshellcmd('python.py');
+$output = shell_exec($command);
+echo $output;
+
+?>
+
     <p><a href="abc.txt">Download TEXT file</a></p>
     </html>  
