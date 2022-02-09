@@ -17,6 +17,7 @@ soup = BeautifulSoup(page.content, "html.parser")
 job_elements = list(soup.find_all('table'))
 table_MN = (pd.read_html("https://www.cs.unc.edu/~saba/COMP_classes/index.html"))[0].to_numpy()
 x=np.delete(table_MN,np.arange(1,len(table_MN),2),0)
-x.tofile('/Users/n/Downloads/sample1.csv',sep=',')
+x.tofile('sample1.csv',sep=',')
+print("hello world")
     
 
